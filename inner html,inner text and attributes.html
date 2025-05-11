@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- FOR SHOWCASING INNER HTML AND HOW IT WORKS -->
+    <div class="box1"></div>
+    <div class="container">
+        <div class="box">Hi i am a box</div>
+    </div>
+    <div id="aman"></div>
+     
+    <!-- SHOWCASING HOW INNER TEXT WORKS  -->
+    <p id="myP" >   This element has extra spacing     and contains <span>a span element</span>.</p>
+   <!-- SHOWCASING ATTRIBUTE USAGE -->
+    <div class="at" style="display: flex;">Hi i am attribute showcaser</div>
+    <script>
+        // The innerHTML property sets or returns the HTML content (inner HTML) of an element.
+        // document.querySelector(".box").innerHTML
+        // document.querySelector(".box1").innerHTML="Hey my name is harry"
+       
+       
+    //    INNER TEXT
+    //    The innerText property sets or returns the text content of an element.
+
+     let text = document.getElementById("myP").innerText;
+    console.log(text);
+    let text2 = document.getElementById("myP").innerHTML;
+    console.log(text2);
+        // The outerHTML property sets or returns the HTML element, including attributes, start tag, and end tag.
+        // document.querySelector(".container").outerHTML
+        //Tag name:The tagName property returns the tag name of an element.
+
+        //  The tagName property returns the tag name in UPPERCASE.
+
+        //  The tagName property is read-only.
+        // console.log(document.querySelector(".container").tagName);
+
+        // attribute selection
+        // hasAttribute:which check whether the elemenet has any attribute or not and will return true or false
+        // document.querySelector(".at").hasAttribute("style")
+
+
+        // get attribute: to get the attribute and its value
+        // document.querySelector(".at").getAttribute("style")
+
+        // set attribute: to set an attribute
+        // document.querySelector(".at").setAttribute("style","display:inline")
+       
+        // remove attribute: To remove an attribute
+        // document.querySelector(".at").removeAttribute("style")
+
+
+        // to edit the webpage temporarily we can use desing mode option
+        // document.designMode="on"
+    </script>
+</body>
+</html>
