@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container red bg-green">
+        <div class="box">Hi i am box 1</div>
+         <div class="box">Hi i am box 2</div>
+    </div>
+    <div id="id1">Hi i am removed</div>
+    <script>
+        // let div= document.createElement("div");
+        // div.innerHTML="I have been created";
+        // div.setAttribute("class","created");
+        // by default when you use apeend the element will be inserted at last
+        // document.querySelector(".container").append(div)
+        // // if you want to insert the element befor any element
+        // document.querySelector(".container").before(div)
+        //  // if you want to insert the element after any element
+        // document.querySelector(".container").after(div)
+     
+
+        // Insert the element at specific position like in between
+        let newDiv = document.createElement("div");
+    newDiv.innerHTML = "Hi I am in between!";
+    newDiv.setAttribute("class", "created");
+
+    // Get the container
+    let container = document.querySelector(".container");
+
+    // Get the second child (box 2)
+    let secondChild = container.children[1];
+
+    // Insert new div before the second child (so it ends up between the two)
+    container.insertBefore(newDiv, secondChild);
+
+
+
+    // Insert string befor container
+     let cont = document.querySelector(".container")
+            cont.insertAdjacentHTML("beforebegin", "<b> I am under the water. Please h elp me here too much raining.... iuuuuooooo</b>")
+
+    
+    // Remove a node
+    // let id1=document.getElementById("id1");
+    // id1.remove();
+
+
+
+
+    // To check the class inside an element
+    // this will give me a class list
+    //  document.querySelector(".container").classList;
+    // //  to get the name
+    // document.querySelector(".container").className;
+    
+
+
+    // We can also used the method classList to add,remove a class in the element
+    // document.querySelector(".container").classList.add("green");
+
+
+    // Toggle function: Toggle between adding and removing a class name from an element with JavaScript.(If the class is applied it will remove it and vice versa)
+    // document.querySelector(".container").classList.toggle("green");
+    </script>
+</body>
+
+</html>
