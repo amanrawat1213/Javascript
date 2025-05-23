@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+       // JavaScript Callbacks
+// A callback is a function passed as an argument to another function.
+
+// Due to asynchronous nature of java this will be executed after the end statement
+// setTimeout(() => {
+//     console.log("I am inside settimeout")
+// }, 0);
+// console.log("The End")
+
+// call back function
+// point to remember:
+// Function Sequence:JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined.
+const fn = () => {
+  console.log("Nothing")
+}
+// sending fn as an argument to callback function
+const callback = (arg, fn) => {
+    console.log(arg)
+    // callin it afterwards
+    fn()
+}
+callback("hello i am your master",fn)
+// as a result the call back function output will be delivered and then after that the fn function output will be delivered
+     </script>
+</body>
+</html>
