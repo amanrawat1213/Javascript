@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log('This is Promises');
+// Callback Alternatives
+// With asynchronous programming, JavaScript programs can start long-running tasks, and continue running other tasks in parallel.
+
+// But, asynchronus programmes are difficult to write and difficult to debug.
+
+// Because of this, most modern asynchronous JavaScript methods don't use callbacks,
+// Instead, in JavaScript, asynchronous programming is solved using Promises instead.
+
+// let prom1 = new Promise((resolve, reject) => {
+//        setTimeout(() => {
+//             console.log("Yes I am done")
+//             // what it will done if its resolve
+//             resolve("Harry")
+//         }, 3000);
+//     }
+// )
+
+// To handle the result or error of a Promise, you use the .then() and .catch() methods. 
+// The .then() method takes a callback function that executes when the Promise is fulfilled, receiving the result value as an argument. 
+// The .catch() method takes a callback function that executes when the Promise is rejected, receiving the error or reason as 
+// an argument.
+
+
+
+// prom1.then((a)=>{
+//     console.log(a)
+
+// })
+let prom1 = new Promise((resolve, reject) => {
+    let a = Math.random();
+    if (a < 0.5) {
+        reject("No random number was not supporting you")
+    }
+    else {
+        setTimeout(() => {
+            console.log("Yes I am done")
+            resolve("Harry")
+        }, 3000);
+    }
+})
+// prom1.then((a)=>{
+//         console.log(a)
+    
+//     })
+    //  ** The best way of writing then while catching the error
+    // prom1.then((a)=>{
+    //     console.log(a)
+    
+    // }).catch((err)=>{
+    //     console.log(err)
+    // })
+
+
+
+
+
+
+
+
+// promise API functions
+let prom2 = new Promise((resolve, reject) => {
+    let a = Math.random();
+    if (a < 0.5) {
+        reject("No random number was not supporting you 2")
+    }
+    else {
+        setTimeout(() => {
+            console.log("Yes I am done 2")
+            resolve("Harry 2")
+        }, 1000);
+    }
+})
+
+
+
+// Promise.all() Method
+// Waits for all promises to resolve and returns their results as an array. If any promise is rejected, it immediately rejects.
+//  let p3 = Promise.all([prom1, prom2])
+// p3.then((a)=>{
+//     console.log(a)
+// }).catch(err=>{
+//     console.log(err)
+// })
+
+
+
+
+
+// The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in an 
+// iterable fulfills or rejects, with the value or reason from that promise.
+
+// We may think of this particular method as in the form of a real-life example where several people are running 
+// in a race whosoever wins comes first wins the race, the same scenario is here, which ever promise is successfully fulfills or 
+// rejects at early will be executed at first and rest one’s results will not be displayed as an output.
+let p3 = Promise.race([prom1, prom2])
+p3.then((a)=>{
+    console.log(a)
+}).catch(err=>{
+    console.log(err)
+})
+    </script>
+</body>
+</html>
+
+
+
