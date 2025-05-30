@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // The Fetch API is a modern interface in JavaScript that allows you to make HTTP 
+        // requests.It replaces the older XMLHttpRequest method and provides a cleaner 
+        // and more flexible way to fetch resources asynchronously.The Fetch API uses Promises
+        // , making it easier to work with asynchronous data.
+
+        //     Syntax
+
+        // fetch(url, options)
+        //     .then(response => response.json())
+        //     .then(data => console.log(data))
+        //     .catch(error => console.error('Error:', error));
+
+// async function getData() {
+//     // Simulate data getting from a server
+//     // there are 2 promises involved one for fetching the data and another for parsing into json
+// //    let x= fetch('https://jsonplaceholder.typicode.com/todos/1')
+//     //   .then(response => response.json())
+//     //   .then(json => console.log(json))
+//     let x = fetch('https://jsonplaceholder.typicode.com/todos/1')
+//     let data=await x.json()
+//     console.log(data)
+
+// }
+async function getData() {
+  let x = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+  let data = await x.json();
+  console.log(data);
+}
+
+getData();
+//         How Fetch API Works?
+// A request is sent to the specified URL.
+// The server processes the request and sends a response.
+// The response is converted to JSON (or another format) using .json().
+// Errors are handled using .catch() or try-catch blocks.
+// Common HTTP Request Methods in Fetch API
+// GET: This request helps to retrieve some data from another server.
+// POST: This request is used to add some data onto the server.
+// PUT: This request is used to update some data on the server.
+// DELETE: This request is used to delete some data on the server.
+    </script>
+</body>
+
+</html>
