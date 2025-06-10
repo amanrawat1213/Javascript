@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Prototype Inheritance
+All JavaScript objects inherit properties and methods from a prototype:
+
+Date objects inherit from Date.prototype
+Array objects inherit from Array.prototype
+Person objects inherit from Person.prototype
+The Object.prototype is on the top of the prototype inheritance chain:
+
+Date objects, Array objects, and Person objects inherit from Object.prototype. -->
+<script>
+// let obj = {
+//     a: 1,
+//     b: "Harry"
+// }
+
+// console.log(obj)
+
+// let animal = {
+//     eats: true
+// };
+
+// let rabbit = {
+//     jumps: true
+// };
+
+// rabbit.__proto__ = animal; // sets rabbit.[[Prototype]] = animal
+
+// However using a prototype is not enough we require the traditional OOPS concept like java. and we have them in js as well
+
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+//         console.log("Object is created...");
+//     }
+
+//     eats() {
+//         console.log("Kha raha hoon");
+//     }
+
+//     jumps() {
+//         console.log("Kood raha hoon");
+//     }
+//   }
+
+//    let a = new Animal("Bunny");
+//    console.log(a);
+//    a.eats();
+//    a.jumps();
+
+
+
+
+
+// to perform inheritance and override the methods
+
+
+
+   class Animal{
+    constructor(name){
+        this.name = name
+        console.log("Object is created...")
+    }
+
+    eats(){
+        console.log("Kha raha hoon")
+    }
+    jumps(){
+        console.log("Kood raha hoon")
+    }
+}
+
+
+class Lion extends Animal {
+    constructor(name){
+        super(name) 
+        console.log("Object is created and he is a lion...")
+    }
+
+    eats(){
+        // super.eats()
+        console.log("Kha raha hoon roar")
+    }
+}
+
+let a = new Animal("Bunny");
+console.log(a)
+
+let l = new Lion("Shera")
+console.log(l)
+
+</script>
+
+</body>
+</html>
