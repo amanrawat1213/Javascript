@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Enter first number")
+
+        let b = prompt("Enter second number")
+        // please parse the numbers to integers since the prompt returns string
+        let sum = parseInt(a) + parseInt(b)
+        // console.log(sum)
+        // // Now since JS have a forgiving nature it usually dont throw error. for eg if you give a string in input it will show just NaN message
+        // // so you can throw an error
+        // if (isNaN(a) || isNaN(b)) {
+        //     throw SyntaxError("Sorry this is not allowed")
+        // }
+
+
+
+// we can catch the error using the try catch block
+
+//  try {
+//         console.log("The sum is ", sum * x)
+        
+//     } catch (error) {
+//         console.log("Error aa gaya bhai")
+//     }
+// the finally block: Remeber the best use of finally is inside a function since when a function is returing a value it will not allow
+// the below code to execute. Hence finally came into picture which makes it possible
+
+function main(){ 
+    let x = 1;
+    try {
+        console.log("The sum is ", sum * x)
+        return true
+        
+    } catch (error) {
+        console.log("Error aa gaya bhai")
+        return false
+    } 
+    finally{
+        console.log("files are being closed and db connection is being closed")
+    }
+  
+}
+
+let c = main()
+    </script>
+</body>
+
+</html>
