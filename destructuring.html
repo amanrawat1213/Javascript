@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Destructuring Assignment Syntax
+The destructuring assignment syntax unpack object properties into variables: -->
+<script>
+   let obj = {
+        a: 1, 
+        b: 2,
+        c: 3
+    }
+
+    let {a, b} = obj
+    console.log(a, b)
+    
+    // to unpack values that are left after can be inclused in a ...rest argument
+    let [x,y,...rest]=[1,2,3,4,5,6]
+    console.log(x,y,rest)
+
+
+</script>
+</body>
+</html>
